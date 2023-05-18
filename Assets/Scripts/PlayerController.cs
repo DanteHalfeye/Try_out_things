@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     [Space]
     [SerializeField] private LayerMask groudLayer;
     [SerializeField] private LayerMask wallLayer;
-
+    [SerializeField] private Animator anim;
 
     //UTILIDAD
     private Vector2 axis = Vector2.zero;
@@ -96,6 +96,7 @@ public class PlayerController : MonoBehaviour
     {
         //Se asigna el valor de respectivo eje dependiendo del input en los ejes X y Y del jugador.
         axis.x = Input.GetAxisRaw("Horizontal");
+        anim.SetBool("run", axis.x != 0f);
         axis.y = Input.GetAxisRaw("Vertical");
         
     }
@@ -119,7 +120,7 @@ public class PlayerController : MonoBehaviour
 
     void Wallslide()
     {
-        //Se evalua que esté tocando una pared, no esté en el suelo y que haya input horizontal para empezar el slide
+        //Se evalua que estï¿½ tocando una pared, no estï¿½ en el suelo y que haya input horizontal para empezar el slide
         if (IsWalled() && !IsGrounded() && axis.x != 0f)
         {
             isWallsliding = true;
