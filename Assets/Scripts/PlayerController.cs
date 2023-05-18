@@ -98,6 +98,7 @@ public class PlayerController : MonoBehaviour
         axis.x = Input.GetAxisRaw("Horizontal");
         anim.SetBool("run", axis.x != 0f);
         axis.y = Input.GetAxisRaw("Vertical");
+        anim.SetBool("jump", axis.y != 0f);
         
     }
     private void Flip()
