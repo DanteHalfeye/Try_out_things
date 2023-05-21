@@ -1,0 +1,58 @@
+Play,Jugar;
+Information,Información;
+Exit,Salir;
+Cognitive Processes
+
+By
+Miguel Angel Muñoz
+Juan Guillermo Caicedo
+Valeria Quintero Cuervo
+Eliham Alejandro Pelaez
+Juliana Alvarado
+Emmanuel Gamboa Hernández
+Cristian Usuga
+Yhojan Esteban Marín
+Lemus David Watler Escobar
+
+Teacher
+Alonso Jose Cortes Bedoya
+
+Pontifical Bolivarian University
+Medellín
+2023,Procesos Cognitivos
+
+Por
+Miguel Angel Muñoz
+Juan Guillermo Caicedo
+Valeria Quintero Cuervo
+Eliham Alejandro Pelaez
+Juliana Alvarado
+Emmanuel Gamboa Hernández
+Cristian Usuga
+Yhojan Esteban Marín
+Lemus David Watler Escobar
+
+Docente
+Alonso Jose Cortes Bedoya
+
+Universidad Pontificia Bolivariana
+Medellín
+2023;
+Return,Volver;
+Mission,Mision;
+The player must enter the door
+
+The cube can enter the portal
+
+The test needs to be completed under 1:40 minutes,El jugador debe cruzar puerta
+
+El cubo puede atravesar el portal
+
+La prueba se debe completar en menos de 1:40 minutos;
+   Start,Comenzar;
+;
+Player,Jugador;
+Cube,Cubo;
+Portal Entry,Entrada Portal;
+Portal Exit,Salida Portal;
+Objective,Objetivo;
