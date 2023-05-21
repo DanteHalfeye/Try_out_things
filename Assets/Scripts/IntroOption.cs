@@ -12,7 +12,9 @@ public enum IntroOptionType
     Info,
     Exit,
 
-    @return,
+    about,
+    return1,
+    return2,
     Start,
 }
 public class IntroOption : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
@@ -28,6 +30,9 @@ public class IntroOption : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
     public GameObject screen3;
     [Space(10)]
     public GameObject title;
+    [Space(5)]
+    public GameObject info1;
+    public GameObject info2;
 
 
     // Start is called before the first frame update
@@ -43,7 +48,10 @@ public class IntroOption : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
     }
     public void OnPointerClick(PointerEventData eventData)
     {
-        switch(type)
+        gameObject.GetComponent<Text>().color = colorNormal;
+        gameObject.GetComponentInChildren<Image>().color = colorNormal;
+
+        switch (type)
         {
             case IntroOptionType.Play:
                 title.SetActive(false);
@@ -53,14 +61,24 @@ public class IntroOption : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
             case IntroOptionType.Info:
                 screen1.SetActive(false);
                 screen2.SetActive(true);
+                info1.SetActive(true);
+                info2.SetActive(false);
                 break;
             case IntroOptionType.Exit:
                 Application.Quit();
                 break;
 
-            case IntroOptionType.@return:
+            case IntroOptionType.about:
+                info1.SetActive(false);
+                info2.SetActive(true);
+                break;
+            case IntroOptionType.return1:
                 screen1.SetActive(true);
                 screen2.SetActive(false);
+                break;
+            case IntroOptionType.return2:
+                info1.SetActive(true);
+                info2.SetActive(false);
                 break;
             case IntroOptionType.Start:
                 SceneManager.LoadScene("Game");

@@ -16,20 +16,29 @@ public class IntroLanguage : MonoBehaviour, IPointerClickHandler, IPointerEnterH
 
     //TextVariables
     public Text textPlay;
-    public Text textInfo;
+    public Text textInfo1;
     public Text textExit;
-
-    public Text textinfo2;
-    public Text textReturn;
-
-    public Text textMission;
-    public Text textMission2;
+     [Space(7)] 
+    public Text text1;
+    public Text text2;
+    public Text text3;
+    public Text textAbout;
+    public Text textReturn1;
+     [Space(7)]
+    public Text textInfo2;
+    public Text textReturn2;
+     [Space(7)]
+    public Text textMissionTitle;
+    public Text textMissionBody;
     public Text textStart;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(language == LanguageType.Spanish)
+        {
+            SetLanguage();
+        }
     }
 
     // Update is called once per frame
@@ -79,35 +88,38 @@ public class IntroLanguage : MonoBehaviour, IPointerClickHandler, IPointerEnterH
         foreach(string s in wordList)
         {
             string[] tmp = new string[2];
-            tmp = s.Split(",");
+            tmp = s.Split("|");
             if(tmp.Length > 1)
             {
                 wordEnglish.Add(tmp[0]);
                 wordSpanish.Add(tmp[1]);
             }
         }
+        List<string> tmpLanguage = new();
         switch (Memory.language)
         {
             case LanguageType.English:
-                textPlay.text = wordEnglish[0];
-                textInfo.text = wordEnglish[1];
-                textExit.text = wordEnglish[2];
-                textinfo2.text = wordEnglish[3];
-                textReturn.text = wordEnglish[4];
-                textMission.text = wordEnglish[5];
-                textMission2.text = wordEnglish[6];
-                textStart.text = wordEnglish[7];
+                tmpLanguage = wordEnglish;
                 break;
             case LanguageType.Spanish:
-                textPlay.text = wordSpanish[0]; 
-                textInfo.text = wordSpanish[1];
-                textExit.text = wordSpanish[2];
-                textinfo2.text = wordSpanish[3];
-                textReturn.text = wordSpanish[4];
-                textMission.text = wordSpanish[5];
-                textMission2.text = wordSpanish[6];
-                textStart.text = wordSpanish[7];
+                tmpLanguage = wordSpanish;
                 break;
         }
+        textPlay.text = tmpLanguage[0];
+        textInfo1.text = tmpLanguage[1];
+        textExit.text = tmpLanguage[2];
+
+        text1.text = tmpLanguage[3];
+        text2.text = tmpLanguage[4];
+        text3.text = tmpLanguage[5];
+        textAbout.text = tmpLanguage[6];
+        textReturn1.text = tmpLanguage[7];
+
+        textInfo2.text = tmpLanguage[8];
+        textReturn2.text = tmpLanguage[9];
+
+        textMissionTitle.text = tmpLanguage[10];
+        textMissionBody.text = tmpLanguage[11];
+        textStart.text = tmpLanguage[12];
     }
 }

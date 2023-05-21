@@ -20,8 +20,7 @@ public class Tutorial : MonoBehaviour
     public Transform player;
     public Transform followPlayer;
 
-    //Language
-    public List<Text> language;
+    bool showTutorial = true;
 
 
     // Start is called before the first frame update
@@ -34,7 +33,8 @@ public class Tutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(timerCurrent < timerMax) timerCurrent += timerFactor;
+        if (listCanvas[0].GetComponent<Text>().color.a <= 0.011f) gameObject.SetActive(false);
+        if (timerCurrent < timerMax) timerCurrent += timerFactor;
         else ChangeAlpha();
 
         FollowPlayer();
@@ -93,29 +93,27 @@ public class Tutorial : MonoBehaviour
         foreach (string s in wordList)
         {
             string[] tmp = new string[2];
-            tmp = s.Split(",");
+            tmp = s.Split("|");
             if (tmp.Length > 1)
             {
                 wordEnglish.Add(tmp[0]);
                 wordSpanish.Add(tmp[1]);
             }
         }
+        List<string> tmpLanguage = new();
         switch (Memory.language)
         {
             case LanguageType.English:
-                language[0].text = wordEnglish[8];
-                language[1].text = wordEnglish[9];
-                language[2].text = wordEnglish[10];
-                language[3].text = wordEnglish[11];
-                language[4].text = wordEnglish[12];
+                tmpLanguage = wordSpanish;
                 break;
             case LanguageType.Spanish:
-                language[0].text = wordSpanish[8];
-                language[1].text = wordSpanish[9];
-                language[2].text = wordSpanish[10];
-                language[3].text = wordSpanish[11];
-                language[4].text = wordSpanish[12];
+                tmpLanguage = wordEnglish;
                 break;
         }
+        listCanvas[0].GetComponent<Text>().text = tmpLanguage[13];
+        listCanvas[1].GetComponent<Text>().text = tmpLanguage[14];
+        listCanvas[2].GetComponent<Text>().text = tmpLanguage[15];
+        listCanvas[3].GetComponent<Text>().text = tmpLanguage[16];
+        listCanvas[4].GetComponent<Text>().text = tmpLanguage[17];
     }
 }

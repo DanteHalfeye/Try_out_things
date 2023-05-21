@@ -1,6 +1,36 @@
-Play,Jugar;
-Information,Información;
-Exit,Salir;
+Play|Jugar;
+Information|Informacion;
+Exit|Salir;
+;
+PROJECT OVERVIEW:
+
+A video game will be developed whose intention will be to test the attentional capacity of the user by dividing the crucial stimuli to be able to progress in the game
+This will be achieved by distributing the key elements of the video game such as platforms, enemies, items and information on 4 different screens, on each of these one of these key elements will be shown, forcing the user to divide their attention to each one of them in order to play. in a correct way|VISTA GENERAL DEL PROYECTO: 
+
+Se desarrollará un videojuego cuya intención será probarla capacidad atencional del usuario al dividir los estímulos cruciales para poder progresar en el juego
+Esto se logrará al repartir los elementos clave del videojuego como plataformas, enemigos, ítems e información en 4 diferentes pantallas, en cada una de estas se mostrará uno de dichos elementos clave obligando al usuario a dividir su atención a cada una de ellas para poder jugar de una manera correcta;
+Supposed:
+
+This project seeks to take the user to his attentional limit and find out what is the common limit among users. It is related to engineering in digital entertainment design as it is a project that innovates the concept of the traditional video game, which is key for it, since it focuses on this very thing. It is estimated that the average user will manage to advance at a good rate at first, while the stimuli are not many and this progress will slow down as the stimuli increase|Supuesto: 
+
+Este proyecto busca llevar al usuario a su límite atencional y averiguar cuál es el límite común entre los usuarios. Se relaciona con la ingeniería en diseño de entretenimiento digital al ser un proyecto que innova el concepto del videojuego tradicional lo cual es clave para esta, ya que se centra en esto mismo. Se estima que el usuario promedio logrará avanzar a un buen ritmo al principio, mientras los estímulos no sean muchos y este progreso se irá ralentizando al aumentar los estímulos;
+THEORETICAL FRAMEWORK:
+
+Attentional principles such as: divided attention, focal attention and alertness are evaluated
+
+
+CONCLUSIONS:
+
+The project will be crucial for testing new entertainment concepts in the future and will lay the foundation for future ideas in both academic and professional development|MARCO TEÓRICO: 
+
+Se evalúan los principios atencionales tales como: La atención dividida, la atención focal y el estado de alerta
+
+
+CONCLUSIONES:
+
+El proyecto será crucial para probar nuevos conceptos de entretenimiento en el futuro y sentará bases para ideas futuras tanto en el desarrollo académico como profesional;
+About...|Acerca...;
+Return|Volver;
 Cognitive Processes
 
 By
@@ -19,7 +49,7 @@ Alonso Jose Cortes Bedoya
 
 Pontifical Bolivarian University
 Medellín
-2023,Procesos Cognitivos
+2023|Procesos Cognitivos
 
 Por
 Miguel Angel Muñoz
@@ -38,21 +68,21 @@ Alonso Jose Cortes Bedoya
 Universidad Pontificia Bolivariana
 Medellín
 2023;
-Return,Volver;
-Mission,Mision;
+Return|Volver;
+Mission|Mision;
 The player must enter the door
 
 The cube can enter the portal
 
-The test needs to be completed under 1:40 minutes,El jugador debe cruzar puerta
+The test needs to be completed under 1:40 minutes|El jugador debe cruzar puerta
 
 El cubo puede atravesar el portal
 
 La prueba se debe completar en menos de 1:40 minutos;
-   Start,Comenzar;
+   Start|Comenzar;
 ;
-Player,Jugador;
-Cube,Cubo;
-Portal Entry,Entrada Portal;
-Portal Exit,Salida Portal;
-Objective,Objetivo;
+Player|Jugador;
+Cube|Cubo;
+Portal Entry|Entrada Portal;
+Portal Exit|Salida Portal;
+Objective|Objetivo;
