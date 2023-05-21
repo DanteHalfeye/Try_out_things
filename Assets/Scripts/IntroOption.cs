@@ -28,8 +28,6 @@ public class IntroOption : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
     public GameObject screen1;
     public GameObject screen2;
     public GameObject screen3;
-    [Space(10)]
-    public GameObject title;
     [Space(5)]
     public GameObject info1;
     public GameObject info2;
@@ -54,7 +52,6 @@ public class IntroOption : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
         switch (type)
         {
             case IntroOptionType.Play:
-                title.SetActive(false);
                 screen1.SetActive(false);
                 screen3.SetActive(true);
                 break;
