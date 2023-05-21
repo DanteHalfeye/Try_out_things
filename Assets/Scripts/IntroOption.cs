@@ -81,7 +81,7 @@ public class IntroOption : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
                 info2.SetActive(false);
                 break;
             case IntroOptionType.Start:
-                SceneManager.LoadScene("Game");
+                SceneManager.LoadScene("Tutorial");
                 break;
         }
     }

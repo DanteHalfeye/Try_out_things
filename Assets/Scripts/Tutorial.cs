@@ -19,8 +19,11 @@ public class Tutorial : MonoBehaviour
     [Space(10)]
     public Transform player;
     public Transform followPlayer;
-
-    bool showTutorial = true;
+    //Tutorial Scene
+    [Space(20)]
+    public bool tutorialScene = true;
+    public Transform cube; 
+    public Transform followCube;
 
 
     // Start is called before the first frame update
@@ -33,11 +36,14 @@ public class Tutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (listCanvas[0].GetComponent<Text>().color.a <= 0.011f) gameObject.SetActive(false);
-        if (timerCurrent < timerMax) timerCurrent += timerFactor;
-        else ChangeAlpha();
-
         FollowPlayer();
+        if(tutorialScene) FollowSquare();
+        else
+        {
+            if (listCanvas[0].GetComponent<Text>().color.a <= 0.011f) gameObject.SetActive(false);
+            if (timerCurrent < timerMax) timerCurrent += timerFactor;
+            else ChangeAlpha();
+        }
     }
 
     void SetColor()
@@ -83,6 +89,10 @@ public class Tutorial : MonoBehaviour
     {
         followPlayer.position = player.position;
     }
+    void FollowSquare()
+    {
+        followCube.position = cube.position;
+    }
     void SetLanguage()
     {
         TextAsset textAsset = (TextAsset)AssetDatabase.LoadAssetAtPath("Assets/Files/Language.txt", typeof(TextAsset));
@@ -104,10 +114,10 @@ public class Tutorial : MonoBehaviour
         switch (Memory.language)
         {
             case LanguageType.English:
-                tmpLanguage = wordSpanish;
+                tmpLanguage = wordEnglish;
                 break;
             case LanguageType.Spanish:
-                tmpLanguage = wordEnglish;
+                tmpLanguage = wordSpanish;
                 break;
         }
         listCanvas[0].GetComponent<Text>().text = tmpLanguage[13];
