@@ -80,7 +80,11 @@ public class IntroLanguage : MonoBehaviour, IPointerClickHandler, IPointerEnterH
 
     public void SetLanguage()
     {
+        #if UNITY_EDITOR
         TextAsset textAsset = (TextAsset)AssetDatabase.LoadAssetAtPath("Assets/Files/Language.txt", typeof(TextAsset));
+        #else
+        TextAsset textAsset = Resources.Load<TextAsset>("Text/Language");
+        #endif
         List<string> wordList = textAsset.text.Split(";").ToList();
         List<string> wordEnglish = new();
         List<string> wordSpanish = new();

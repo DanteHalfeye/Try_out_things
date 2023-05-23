@@ -19,25 +19,20 @@ public class Door : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if(swapScene)
-        {
-            if(swapSceneCurrent >= swapSceneMax)
-            {
-                SceneManager.LoadScene("Game");
-            }
-            else
-            {
-                swapSceneCurrent += swapSceneFactor;
-            }
-        }
-    }
+    // void Update()
+    // {
+    //     if(swapScene)
+    //     {
+
+    //         SceneManager.LoadScene("Game");
+            
+    //     }
+    // }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            swapScene = true;
+            SceneManager.LoadScene("Game");
         }
     }
 }
