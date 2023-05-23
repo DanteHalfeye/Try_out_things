@@ -5583,6 +5583,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3206733709442937532, guid: 8f3f8ba5288bffd4c8c82e99ff937d01, type: 3}
+      propertyPath: sceneName
+      value: Game
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f3f8ba5288bffd4c8c82e99ff937d01, type: 3}
 --- !u!1001 &3459058736207764313
